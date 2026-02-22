@@ -1,0 +1,43 @@
+version: "3.9"
+
+services:
+  db:
+    image: mariadb:11
+    restart: always
+    environment:
+      MYSQL_DATABASE: db
+      MYSQL_USER: db
+      MYSQL_PASSWORD: db
+      MYSQL_ROOT_PASSWORD: root
+    volumes:
+      - db_data:/var/lib/mysql
+      - ./docker/db/init:/docker-entrypoint-initdb.d:ro
+    networks:
+      - typo3    
+
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: always
+    depends_on:
+      - db
+    environment:
+      TYPO3_CONTEXT: Production
+    ports:
+      - "8080:80"
+    volumes:
+      - fileadmin:/var/www/html/public/fileadmin
+      - systemconf:/var/www/html/config/system
+      - var_data:/var/www/html/var
+    networks:
+      - typo3
+
+networks:
+  typo3:
+
+volumes:
+  db_data:
+  fileadmin:
+  systemconf:
+  var_data:

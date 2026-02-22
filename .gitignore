@@ -1,36 +1,21 @@
-########################################
-# OS / IDE
-########################################
+# --- Local development ---
+.ddev/
+docker-compose.local.yml
+docker-compose.dev.yml
+.env
+.env.*
+
+# --- Runtime / generated ---
+vendor/
+var/
+public/typo3temp/
+public/_assets/
+
+# --- OS / editor ---
 .DS_Store
+Thumbs.db
+.vscode/
 .idea/
-nbproject/
 
-########################################
-# Composer
-########################################
-/vendor/
-
-########################################
-# TYPO3 runtime files
-########################################
-/var/
-/public/typo3temp/
-/public/_assets/
-/public/fileadmin/_processed_/
-
-########################################
-# Environment-specific config
-########################################
-/config/system/settings.php
-
-########################################
-# Logs
-########################################
+# --- Logs ---
 *.log
-
-########################################
-# Optional: Node tooling
-########################################
-node_modules/
-npm-debug.log
-yarn-error.log
