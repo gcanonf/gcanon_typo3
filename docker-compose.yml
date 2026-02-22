@@ -20,7 +20,7 @@ services:
   web:
     build:
       context: .
-      dockerfile: Dockerfile
+      dockerfile: DockerfileTypo3
     restart: always
     depends_on:
       - db
