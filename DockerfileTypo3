@@ -50,8 +50,9 @@ RUN composer install --no-dev --prefer-dist --no-interaction --optimize-autoload
 COPY . .
 
 # Ensure required writable directories exist
-RUN mkdir -p var public/fileadmin public/typo3temp public/_assets \
- && chown -R www-data:www-data var public/fileadmin public/typo3temp public/_assets
+RUN mkdir -p var public/fileadmin public/typo3temp public/_assets config/sites \
+ && chown -R www-data:www-data var public/fileadmin public/typo3temp public/_assets config/sites
+
 
 # Declare persistent volumes (same style as your previous image)
 VOLUME /var/www/html/public/fileadmin
