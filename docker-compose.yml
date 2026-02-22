@@ -2,7 +2,10 @@ version: "3.9"
 
 services:
   db:
-    image: mariadb:11
+    build:
+      context: .
+      dockerfile: DockerfileDb
+    image: gcanonf/gcanon_mariadb:11-typo3-init   
     restart: always
     environment:
       MYSQL_DATABASE: db
@@ -11,7 +14,6 @@ services:
       MYSQL_ROOT_PASSWORD: root
     volumes:
       - db_data:/var/lib/mysql
-      - ./docker/db/init:/docker-entrypoint-initdb.d:ro
     networks:
       - typo3    
 
@@ -24,8 +26,6 @@ services:
       - db
     environment:
       TYPO3_CONTEXT: Production
-    #ports:
-    #  - "8080:80"
     volumes:
       - fileadmin:/var/www/html/public/fileadmin
       - systemconf:/var/www/html/config/system
