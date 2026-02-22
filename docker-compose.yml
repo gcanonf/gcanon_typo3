@@ -24,8 +24,8 @@ services:
       - db
     environment:
       TYPO3_CONTEXT: Production
-    ports:
-      - "8080:80"
+    #ports:
+    #  - "8080:80"
     volumes:
       - fileadmin:/var/www/html/public/fileadmin
       - systemconf:/var/www/html/config/system
