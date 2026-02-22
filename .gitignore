@@ -1,8 +1,36 @@
+########################################
+# OS / IDE
+########################################
 .DS_Store
-.idea
-nbproject
-/var/*
-!/var/labels
-/vendor
-/public/*
-!/public/.htaccess
+.idea/
+nbproject/
+
+########################################
+# Composer
+########################################
+/vendor/
+
+########################################
+# TYPO3 runtime files
+########################################
+/var/
+/public/typo3temp/
+/public/_assets/
+/public/fileadmin/_processed_/
+
+########################################
+# Environment-specific config
+########################################
+/config/system/settings.php
+
+########################################
+# Logs
+########################################
+*.log
+
+########################################
+# Optional: Node tooling
+########################################
+node_modules/
+npm-debug.log
+yarn-error.log

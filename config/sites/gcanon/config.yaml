@@ -1,0 +1,19 @@
+base: 'https://gcanon-typo3.ddev.site/'
+dependencies:
+  - typo3/fluid-styled-content
+  - typo3/fluid-styled-content-css
+  - typo3/seo-sitemap
+  - gcanon/gcanonsitepackage
+languages:
+  -
+    title: English
+    enabled: true
+    languageId: 0
+    base: /
+    locale: en_US.UTF-8
+    navigationTitle: English
+    flag: us
+    hreflang: ''
+    websiteTitle: ''
+rootPageId: 1
+websiteTitle: gcanon

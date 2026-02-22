@@ -1,0 +1,21 @@
+{
+    "name": "gcanon/gcanonsitepackage",
+    "type": "typo3-cms-extension",
+    "description": "First site package of gcanon.de site",
+    "homepage": "https://gcanon.de",
+    "license": ["GPL-2.0-or-later"],
+    "keywords": ["TYPO3 CMS"],
+    "require": {
+        "bk2k/bootstrap-package": "^15.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Gcanon\\Gcanonsitepackage\\": "Classes/"
+        }
+    },
+    "extra": {
+        "typo3/cms": {
+            "extension-key": "gcanonsitepackage"
+        }
+    }
+}

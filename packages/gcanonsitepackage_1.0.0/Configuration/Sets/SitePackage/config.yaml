@@ -1,0 +1,4 @@
+name: gcanon/gcanonsitepackage
+label: 'gcanonSitePackage'
+dependencies:
+  - bootstrap-package/full

@@ -1,0 +1,21 @@
+page {
+    includeCSS {
+        theme = EXT:gcanonsitepackage/Resources/Public/Scss/Theme/theme.scss
+    }
+
+    includeJSLibs {
+
+    }
+
+    includeJS {
+
+    }
+
+    includeJSFooterlibs {
+
+    }
+
+    includeJSFooter {
+        gcanonsitepackage_scripts = EXT:gcanonsitepackage/Resources/Public/JavaScript/main.js
+    }
+}

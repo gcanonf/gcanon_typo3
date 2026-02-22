@@ -1,0 +1,28 @@
+plugin:
+  bootstrap_package:
+    settings:
+      scss:
+        primary: '#eb3e4a'
+        secondary: '#013859'
+    view:
+      layoutRootPath: 'EXT:gcanonsitepackage/Resources/Private/Layouts/'
+      partialRootPath: 'EXT:gcanonsitepackage/Resources/Private/Partials/'
+      templateRootPath: 'EXT:gcanonsitepackage/Resources/Private/Templates/'
+  bootstrap_package_contentelements:
+    view:
+      layoutRootPath: 'EXT:gcanonsitepackage/Resources/Private/Layouts/ContentElements/'
+      partialRootPath: 'EXT:gcanonsitepackage/Resources/Private/Partials/ContentElements/'
+      templateRootPath: 'EXT:gcanonsitepackage/Resources/Private/Templates/ContentElements/'
+page:
+  logo:
+    file: 'EXT:gcanonsitepackage/Resources/Public/Images/logo.svg'
+    fileInverted: 'EXT:gcanonsitepackage/Resources/Public/Images/logo-inverted.svg'
+    width: 192
+    alt: 'My Site Package'
+    linktitle: 'My Site Package'
+  favicon:
+    file: 'EXT:gcanonsitepackage/Resources/Public/Icons/favicon.ico'
+  fluidtemplate:
+    layoutRootPath: 'EXT:gcanonsitepackage/Resources/Private/Layouts/Page/'
+    partialRootPath: 'EXT:gcanonsitepackage/Resources/Private/Partials/Page/'
+    templateRootPath: 'EXT:gcanonsitepackage/Resources/Private/Templates/Page/'
