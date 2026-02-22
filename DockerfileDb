@@ -1,0 +1,3 @@
+FROM mariadb:11
+# Copy init scripts into the standard init directory
+COPY docker/db/init/ /docker-entrypoint-initdb.d/
